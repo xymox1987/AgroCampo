@@ -9,6 +9,8 @@ Proyecto creado con .net core , cuenta con las siguientes especificaciones:
 - Pensado para integrarse con un sistema de autenticación Single Sign On
 - API orientada a Micro servicios
 - Incluye archivo Dockerfile para dockerización
+- Conexión con Base de datos SQL Server
+- Implementa Entity Framework 
 
 
 ## Pasos para la ejecución
