@@ -1,0 +1,154 @@
+﻿
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Acta de reparto de primera Instancia</title>
+      <style> {#asset bootstrap.min.css @encoding=utf8}</style> 
+    <style>
+        .title {
+            font-weight: bold;
+        }
+        .sj {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+        }
+        .asunto {
+            border: 0px;
+            word-break: break-word;
+        }
+        .logo {
+            vertical-align:middle;
+            height: 150px;
+        }
+        .no-space {
+            margin-bottom: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-xxl">
+        <div class="row">
+            <table class="table table-secondary align-middle table-bordered">
+                <tr>
+                    <td style="width: 25%">
+                        <img src="{#asset images/LogoCorte.png @encoding=dataURI}"
+                             class="img-fluid">
+                    </td>
+                    <th style="width: 60%; text-align: center">
+                        <h2 class="no-space">xxxxxxxxxxxxxxxxxx</h2>
+                        <h2>xxxxxxxxxxxxxx</h2>
+                        <h3 class="no-space">xxxxxxxxxxxxxxxxxx</h3>
+                        <h3>{{especialidad}}</h3>
+                        <h1 style="margin-bottom:0px">xxxxxxxxxxxxxxxxxxxxxxx</h1>
+                    </th>
+                    <td style="width: 15%">
+                        <span class="title">Fecha:</span>{{fechaReparto}}
+                    </td>
+                </tr>
+            </table>
+            <br></br>
+
+            <table class="table">
+                <tr>
+                    <td class="title">NÚMERO RADICACIÓN:</td>
+                    <td>{{nroOperacion}}</td>
+                    <td class="title">GRUPO DE REPARTO:</td>
+                    <td>{{grupoReparto}}</td>
+                </tr>
+                <tr>
+                    <td class="title">xxxxxxxxxxxxxxxxxxxx:</td>
+                    <td>{{nroDespacho}}</td>
+                    <td class="title">SECUENCIA:</td>
+                    <td>{{secuencia}}</td>
+                </tr>
+                <tr>
+                    <td class="title">FECHA REPARTO:</td>
+                    <td>{{fechaReparto}}</td>
+                    <td class="title">FECHA PRESENTACIÓN:</td>
+                    <td>{{fechaPresentacion}}</td>
+                </tr>
+                <tr>
+                    <td class="title">TIPO REPARTO:</td>
+                    <td>{{tipoReparto}}</td>
+                    <td class="title">REPARTIDO AL DESPACHO:</td>
+                    <td>{{repartoDespacho}}</td>
+                </tr>
+            </table>
+            <table class="table">
+                <tr>
+                    <td class="title" style="width:10%">ASUNTO:</td>
+                    <td class="asunto">{{asunto}}</td>
+                </tr>
+            </table>
+            <br></br>
+        </div>
+
+        <div class="row">
+            <h2>Sujetos Procesales:</h2>
+            <table class="table table-secondary align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">TIPO ID</th>
+                        <th scope="col">IDENTIFICACIÓN</th>
+                        <th scope="col">NOMBRES</th>
+                        <th scope="col">APELLIDOS</th>
+                        <th scope="col">PARTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each sujetos}}
+                    <tr>
+                        <td>{{tipoId}}</td>
+                        <td>{{identificacion}}</td>
+                        <td>{{nombre}}</td>
+                        <td>{{apellido}}</td>
+                        <td>{{parte}}</td>
+                    </tr>
+                    {{/each}}
+
+
+                </tbody>
+            </table>
+
+        </div>
+        <br></br>
+        <div class="row">
+            <h2>Archivos Adjuntos:</h2>
+            <table class="table table-Info align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">ARCHIVO</th>
+                        <th scope="col">CÓDIGO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each archivos}}
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>{{codigo}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <br></br>
+        <div class="row">
+            <div class="sj">
+                <span style="text-decoration: underline;">{{servidorJudicial}}</span>
+                <br>
+                <span class="title">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
