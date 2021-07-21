@@ -3,7 +3,7 @@
 ## Descripción del proyecto
 
 Proyecto creado con .net core , cuenta con las siguientes especificaciones:
-- Capas que separan sirven para separar la lógica de negocio : API,BUSINESS,COMMON,DATAACCESS,DOMAIN
+- Capas que sirven para separar la lógica de negocio : API,BUSINESS,COMMON,DATAACCESS,DOMAIN
 - Inyección de dependencias
 - Patrón Repository
 - Pensado para integrarse con un sistema de autenticación Single Sign On
@@ -14,7 +14,7 @@ Proyecto creado con .net core , cuenta con las siguientes especificaciones:
 ## Pasos para la ejecución
 
 1. Ejecute el script ubicado en la carpeta ScriptDB, para la creación de la base de datos  
-1. Cambiar la cadena de conexion en el archivo appsettings.json
+1. Cambiar la cadena de conexión en el archivo appsettings.json
 1. Ubiquese en la carpeta AgroCampo_Back/AgroCampo_Api
 1. Ejecute el proyecto con el comando 
    ~~~ 
